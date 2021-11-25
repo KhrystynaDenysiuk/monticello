@@ -1,0 +1,93 @@
+@import "__mixins";
+@import "__vars";
+
+.footer {
+    background: url(../img/background-footer.jpg);
+    background-size: cover;
+    height: 100%;
+    font-family: $gotham_book;
+    position: relative;
+
+    &__container {
+        max-width: 770px !important;
+    }
+
+    &__content {
+        padding: 210px 0;
+
+        @media screen and (max-width: 800px) {
+            padding-top: 243px;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__image {
+        @include FlexSpaceBetweenCenter();
+        padding-top: 35px;
+        
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+        }
+    }
+
+    &__icons {
+
+        .fa {
+            border: 1px solid #fff;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 0 10px;
+            color: #fff;
+
+            &.fa-facebook {
+                padding: 10px 14px;
+            }
+
+            &.fa-instagram {
+                padding: 10px 12px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+           margin: 20px 0;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        margin-top: 40px;
+
+        @media screen and (max-width: 800px) {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+
+           h4 {
+               margin: 0 0 10px;
+           }
+        }
+    }
+
+    &__title {
+        position: relative;
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    &__title::after {
+        @include ContentPositionAbsolute();
+        width: 1px;
+        height: 20px;
+        background-color: #fff;
+        bottom: 1px;
+        right: -10%;
+
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+    }
+}

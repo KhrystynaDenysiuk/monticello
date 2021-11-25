@@ -1,0 +1,14 @@
+.maps {
+
+    &__container {
+        max-width: unset !important;
+    }
+
+    &__content {
+        margin-top: 140px;
+    }
+}
+
+#map {
+    height: 700px;
+}

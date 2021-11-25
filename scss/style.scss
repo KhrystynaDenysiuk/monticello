@@ -1,0 +1,38 @@
+@import "__fonts";
+@import "header";
+@import "projectTrade";
+@import "projectCommerce";
+@import "news";
+@import "gallery";
+@import "maps";
+@import "contact";
+@import "footer";
+@import "__vars";
+@import "__mixins";
+@import "__normalize";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #fff;
+    overflow-x: hidden;
+
+    // @media screen and (max-width: 500px){
+    //    border: 0;
+    // }
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}

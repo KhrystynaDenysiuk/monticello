@@ -1,0 +1,144 @@
+@import "__mixins";
+@import "__vars";
+
+.contact {
+    @include PositionAbsoluteZ-index2();
+    left: 50%;
+    transform: translate(-50%, -66%);
+    height: 450px;
+    font-family: $gotham_book;
+
+    &__container {
+        background: url(../img/background-contact.jpg);
+        background-size: cover;
+    }
+
+    &__content {
+        width: 770px;
+        margin: 0 auto;
+        padding-top: 100px;
+        
+        @media screen and (max-width: 800px) {
+            width: 100%;
+            padding: 60px 15px 0;
+            background: #fff;
+        }
+    }
+
+    &__title {
+        position: relative;
+        text-align: center;
+        font-family: $gotham_bold;
+        letter-spacing: 1px;
+        font-size: 35px;
+        margin-bottom: 50px;
+        color: #4b5562;
+    }
+
+    &__title::after {
+        @include ContentPositionAbsolute();
+        width: 80px;
+        height: 1px;
+        background-color: #4b5562;
+        bottom: 65px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__block {
+        @include FlexSpaceBetween();
+        margin: 0 65px;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &__f-block {
+        @include FlexCpaceAround();
+        align-items: top;
+        width: auto;
+
+        .form, 
+        .info {
+            @include FlexColumn();
+            flex-basis: 450px;
+        }
+    }
+}
+
+.form {
+
+    &__input {
+        width: 310px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        color: #000; 
+        opacity: 0.6;
+    }
+    
+    &__input::placeholder {
+        color: #4b5562;
+        opacity: 1;
+    }
+
+    &__input:hover {
+        opacity: 1;
+    }
+
+    &__input:focus {
+        outline: none;
+        opacity: 1;
+    }
+
+    &__button {
+        width: 140px;
+        padding: 20px 0 10px 0;
+        transform: translateX(121%);
+        font-size: 13px;
+        background-color: #fff;
+        border: 1px solid #000;
+        cursor: pointer;
+        margin: 30px 0 80px 0;
+        font-family: $gotham_book;
+        opacity: 0.3;
+
+        @media screen and (max-width: 800px) {
+            margin: 15px 0 25px;
+        }
+    }
+
+    &__button:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: #9982ee;
+    }
+}
+
+.info {
+
+    &__title {
+        display: inline-block;
+        font-family: $gotham_book;
+        color: #4b5562;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    &__text {
+        padding-bottom: 30px;
+        color: #000;
+
+        .fa {
+            color: #7e5aff;
+
+            &.fa-phone {
+                transform: rotate(85deg);
+            }
+        }
+    }
+}

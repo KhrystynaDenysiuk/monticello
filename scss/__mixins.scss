@@ -1,0 +1,41 @@
+@mixin FlexSpaceBetweenCenter() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin FlexColumn() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin FlexCpaceAround() {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin FlexSpaceBetween() {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin FlexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin PositionAbsoluteZ-index1() {
+    position: absolute;
+    z-index: 1;
+}
+
+@mixin PositionAbsoluteZ-index2() {
+    position: absolute;
+    z-index: 2;
+}
+
+@mixin ContentPositionAbsolute() {
+    content: "";
+    position: absolute;
+}
