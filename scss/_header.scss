@@ -22,8 +22,6 @@
 
     &__icons {
 
-        margin-bottom: 6px;
-
         .fa {
             border: 1px solid #fff;
             border-radius: 50%;
@@ -140,7 +138,6 @@
 .menu {
     font-family: $gotham_book;
     width: 600px;
-    padding-top: 13px;
 
     @media screen and (max-width: 1065px){
         width: 100%;
@@ -231,6 +228,10 @@
 
     &__ul-menu {
         @include FlexSpaceBetween();
+
+        &.item:hover {
+            color: #ff0000;
+        }
     }
         
 }
@@ -253,6 +254,8 @@ a {
         font-family: $gotham_book;
         letter-spacing: 1px;
         font-size: 15px;
+        height: 28px;
+        align-items: end;
 
         @media screen and (max-width: 975px) {
             flex-direction: column;
