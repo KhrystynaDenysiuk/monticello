@@ -57,16 +57,19 @@
         }
     }
 
-    &__facebook {
-        display: inline-block;
-    }
-
-    &__twitter {
-        display: inline-block;
-    }
-
+    &__facebook,
+    &__twitter,
     &__instagram {
         display: inline-block;
+    }
+
+    &__facebook:hover .fa,
+    &__twitter:hover .fa,
+    &__instagram:hover .fa {
+        transition: 1s;
+        transform: rotate(360deg);
+        border: 1px solid #000;
+        color: #000;
     }
 
     &__block {
@@ -130,6 +133,13 @@
             @media screen and (max-width: 715px){
                 padding: 11px 15px;
             }
+        }
+
+        .fa-angle-down:hover {
+            transition: 1s;
+            transform: rotate(360deg);
+            border: 1px solid #000;
+            color: #000;
         }
     }
 }
@@ -228,15 +238,26 @@
 
     &__ul-menu {
         @include FlexSpaceBetween();
-
-        &.item:hover {
-            color: #ff0000;
-        }
     }
-        
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.item:hover a::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
 }
 
 a {
+    position: relative;
+    text-decoration: none;
     color: #fff;
 }
 
@@ -249,13 +270,15 @@ a {
     .list__ul-menu {
         
         @include FlexSpaceBetween();
-        list-style: none;
-        font-size: 12px;
         font-family: $gotham_book;
         letter-spacing: 1px;
         font-size: 15px;
         height: 28px;
         align-items: end;
+
+        @media screen and (min-width: 975px) and (max-width: 1110px) {
+            margin: 0 29px;
+        }
 
         @media screen and (max-width: 975px) {
             flex-direction: column;
@@ -271,8 +294,6 @@ a {
     }
 
     li {
-
-        margin-left: 20px;
 
         @media screen and (max-width: 975px) {
             width: 100%;

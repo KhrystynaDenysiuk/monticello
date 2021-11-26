@@ -119,6 +119,10 @@
 
     &__subtitle {
         font-size: 18px;
+
+        @media screen and (min-width: 975px) and (max-width: 1110px) {
+            margin-top: 20px;
+        }
     }
 
     &__title {
@@ -151,7 +155,7 @@
 }
 
 .show_1 {
-    padding: 19px 35px 9px 35px;
+    padding: 19px 35px;
     font-size: 13px;
     background-color: #fff;
     border: 1px solid #000;

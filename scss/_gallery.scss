@@ -16,6 +16,10 @@
         font-size: 35px;
         color: #4b5562;
         margin-bottom: 100px;
+
+        @media screen and (min-width: 980px) and (max-width: 1110px) {
+            margin-bottom: 50px;
+        }
     }
 
     &__title::after {
@@ -32,6 +36,11 @@
         @include FlexCenter();
         margin-bottom: 5px;
 
+        @media screen and (min-width: 980px) and (max-width: 1110px) {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
         @media screen and (max-width: 980px) {
             flex-direction: column;
             padding: 0 15px;
@@ -42,7 +51,8 @@
         margin-right: 10px;
         position: relative;
         
-        @media screen and (max-width: 980px) {
+        @media screen and (max-width: 1110px) {
+            margin-bottom: 7px;
             margin-right: 0;
         }
     }
@@ -94,17 +104,8 @@
     }
 
     @media screen and (max-width: 1170px) {
-        &__top {
-            margin-bottom: 0;
-        } 
-    
-        &__left {
-            margin-right: 0;
-        }
-    
-        &__right {
-            margin-left: 0;
-        }
+        width: 580px;
+        margin-bottom: 7px;
     }
 }
 
