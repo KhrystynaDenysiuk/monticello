@@ -14,10 +14,6 @@
         font-family: $gotham_book;
     }
 
-    &__container {
-        position: relative;
-    }
-
     &__title {
         position: relative;
         text-align: center;
@@ -37,7 +33,34 @@
     }
 }
 
-.center {
+.container {
+    position: relative;
+
+    &__block1 {
+        position: absolute;
+        top: 200px;
+        left: -225px;
+        width: 630px;
+        height: 470px;
+        z-index: -1;
+        background-color: #55b7ff;
+
+        @media screen and (max-width: 1110px){
+            height: 420px;
+        }
+
+        @media screen and (max-width: 1110px){
+            display: none;
+        }
+
+        &.burning {
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+.centerT {
     @include FlexSpaceBetweenCenter();
 
     @media screen and (min-width: 1110px) {
@@ -74,29 +97,7 @@
         cursor: pointer;
         
         @media screen and (min-width: 980px) {
-            transform: translate(-35.6%, -19.2%);
-        }
-    }
-
-    &__block {
-        position: absolute;
-        top: 200px;
-        left: -225px;
-        width: 630px;
-        height: 470px;
-        background-color: #55b7ff;
-
-        @media screen and (max-width: 1110px){
-            height: 420px;
-        }
-
-        @media screen and (max-width: 1110px){
-            display: none;
-        }
-
-        &.burning {
-            right: 0;
-            bottom: 0;
+            transform: translate(-35.6%, -18.1%);
         }
     }
 }

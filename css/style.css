@@ -414,10 +414,6 @@ a {
   font-family: "Gotham Book", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.projectTrade__container {
-  position: relative;
-}
-
 .projectTrade__title {
   position: relative;
   text-align: center;
@@ -438,7 +434,38 @@ a {
           transform: translateX(-50%);
 }
 
-.center {
+.container {
+  position: relative;
+}
+
+.container__block1 {
+  position: absolute;
+  top: 200px;
+  left: -225px;
+  width: 630px;
+  height: 470px;
+  z-index: -1;
+  background-color: #55b7ff;
+}
+
+@media screen and (max-width: 1110px) {
+  .container__block1 {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .container__block1 {
+    display: none;
+  }
+}
+
+.container__block1.burning {
+  right: 0;
+  bottom: 0;
+}
+
+.centerT {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,13 +478,13 @@ a {
 }
 
 @media screen and (min-width: 1110px) {
-  .center {
+  .centerT {
     padding-top: 150px;
   }
 }
 
 @media screen and (max-width: 975px) {
-  .center {
+  .centerT {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -466,18 +493,18 @@ a {
   }
 }
 
-.center__gallery {
+.centerT__gallery {
   position: relative;
 }
 
 @media screen and (max-width: 660px) {
-  .center__gallery {
+  .centerT__gallery {
     width: 100%;
     height: 100%;
   }
 }
 
-.center__img {
+.centerT__img {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 2;
@@ -485,46 +512,20 @@ a {
   width: 100%;
 }
 
-.center__img.lake {
+.centerT__img.lake {
   top: 0;
   left: 0;
 }
 
-.center__img:hover {
+.centerT__img:hover {
   cursor: pointer;
 }
 
 @media screen and (min-width: 980px) {
-  .center__img:hover {
-    -webkit-transform: translate(-35.6%, -19.2%);
-            transform: translate(-35.6%, -19.2%);
+  .centerT__img:hover {
+    -webkit-transform: translate(-35.6%, -18.1%);
+            transform: translate(-35.6%, -18.1%);
   }
-}
-
-.center__block {
-  position: absolute;
-  top: 200px;
-  left: -225px;
-  width: 630px;
-  height: 470px;
-  background-color: #55b7ff;
-}
-
-@media screen and (max-width: 1110px) {
-  .center__block {
-    height: 420px;
-  }
-}
-
-@media screen and (max-width: 1110px) {
-  .center__block {
-    display: none;
-  }
-}
-
-.center__block.burning {
-  right: 0;
-  bottom: 0;
 }
 
 .text {
@@ -634,10 +635,6 @@ a {
   }
 }
 
-.projectCommerce__container {
-  position: relative;
-}
-
 .projectCommerce__title {
   position: relative;
   text-align: center;
@@ -658,7 +655,7 @@ a {
           transform: translateX(-50%);
 }
 
-.center {
+.centerC {
   height: 100%;
   color: #4b5562;
   padding-bottom: 140px;
@@ -675,13 +672,13 @@ a {
 }
 
 @media screen and (min-width: 1110px) {
-  .center {
-    padding-top: 150px;
+  .centerC {
+    padding-top: 200px;
   }
 }
 
 @media screen and (max-width: 975px) {
-  .center {
+  .centerC {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -690,18 +687,18 @@ a {
   }
 }
 
-.center__gallery {
+.centerC__gallery {
   position: relative;
 }
 
 @media screen and (max-width: 660px) {
-  .center__gallery {
+  .centerC__gallery {
     width: 100%;
     height: 100%;
   }
 }
 
-.center__img {
+.centerC__img {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 2;
@@ -709,23 +706,23 @@ a {
   width: 100%;
 }
 
-.center__img.apartment {
+.centerC__img.apartment {
   top: 0;
   left: 0;
 }
 
-.center__img:hover {
+.centerC__img:hover {
   cursor: pointer;
 }
 
 @media screen and (min-width: 980px) {
-  .center__img:hover {
+  .centerC__img:hover {
     -webkit-transform: translate(-35.6%, -19.2%);
             transform: translate(-35.6%, -19.2%);
   }
 }
 
-.center__block {
+.centerC__block {
   position: absolute;
   top: 175px;
   right: -200px;
@@ -736,18 +733,49 @@ a {
 }
 
 @media screen and (max-width: 1110px) {
-  .center__block {
+  .centerC__block {
     height: 420px;
   }
 }
 
 @media screen and (max-width: 1110px) {
-  .center__block {
+  .centerC__block {
     display: none;
   }
 }
 
-.center__block.burning {
+.centerC__block.burning {
+  right: 0;
+  bottom: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.container__block2 {
+  position: absolute;
+  top: 110px;
+  left: -225px;
+  width: 630px;
+  height: 470px;
+  z-index: -1;
+  background-color: #55b7ff;
+}
+
+@media screen and (max-width: 1110px) {
+  .container__block2 {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .container__block2 {
+    display: none;
+  }
+}
+
+.container.burning {
   right: 0;
   bottom: 0;
 }
