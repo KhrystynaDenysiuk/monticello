@@ -17,7 +17,7 @@
         color: #4b5562;
         margin-bottom: 100px;
 
-        @media screen and (min-width: 980px) and (max-width: 1110px) {
+        @media screen and (min-width: 120px) and (max-width: 1110px) {
             margin-bottom: 50px;
         }
     }
@@ -36,7 +36,7 @@
         @include FlexCenter();
         margin-bottom: 5px;
 
-        @media screen and (min-width: 980px) and (max-width: 1110px) {
+        @media screen and (min-width: 980px) and (max-width: 1185px) {
             flex-direction: column;
             margin-bottom: 0;
         }
@@ -51,7 +51,7 @@
         margin-right: 10px;
         position: relative;
         
-        @media screen and (max-width: 1110px) {
+        @media screen and (max-width: 1185px) {
             margin-bottom: 7px;
             margin-right: 0;
         }
@@ -97,15 +97,29 @@
 
     &__left {
         margin-right: 5px;
+
+        @media screen and (min-width: 120px) and (max-width: 980px) {
+            margin-right: 0;
+            margin-bottom: 7px;
+        }
     }
 
     &__right {
         margin-left: 5px;
+
+        @media screen and (min-width: 120px) and (max-width: 980px) {
+            margin-left: 0;
+            margin-top: 7px;
+        }
     }
 
-    @media screen and (max-width: 1170px) {
+    @media screen and (max-width: 1185px) {
         width: 580px;
         margin-bottom: 7px;
+    }
+
+    @media screen and (min-width: 120px) and (max-width: 615px) {
+        width: 100%;
     }
 }
 
@@ -146,7 +160,7 @@
         width: 285px;
     }
 
-    @media screen and (max-width: 1170px) {
+    @media screen and (max-width: 1185px) {
        width: 580px;
        flex-wrap: wrap;
        margin: 0 auto;
