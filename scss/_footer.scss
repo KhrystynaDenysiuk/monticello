@@ -15,9 +15,12 @@
     &__content {
         padding: 210px 0;
 
-        @media screen and (max-width: 800px) {
-            padding-top: 243px;
-            padding-bottom: 50px;
+        @media screen and (max-width: 975px) {
+            padding: 100px 0;
+        }
+
+        @media screen and (max-width: 975px) {
+            padding: 50px 0;
         }
     }
 
@@ -25,8 +28,12 @@
         @include FlexSpaceBetweenCenter();
         padding-top: 35px;
         
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 975px) {
             flex-direction: column;
+        }
+
+        @media screen and (max-width: 400px) {
+            padding-top: 0;
         }
     }
 
@@ -48,8 +55,12 @@
             }
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 975px) {
            margin: 20px 0;
+        }
+
+        @media screen and (max-width: 800px) {
+            margin: 30px 0 0 0;
         }
     }
 
@@ -57,7 +68,7 @@
         font-size: 12px;
         margin-top: 40px;
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 975px) {
            display: flex;
            flex-direction: column;
            align-items: center;

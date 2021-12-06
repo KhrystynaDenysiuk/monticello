@@ -91,6 +91,14 @@
         @include FlexColumn();
         align-items: center;
         margin: 250px 0;
+
+        @media screen and (max-width: 715px){
+            margin: 235px 0;
+        }
+
+        @media screen and (max-width: 400px){
+            margin: 210px 0;
+        }
     }
 
     &__title {
@@ -108,6 +116,7 @@
 
         @media screen and (max-width: 715px){
             width: 90%;
+            line-height: 60px;
             text-align: center;
         }
     }
@@ -128,6 +137,7 @@
 
         @media screen and (max-width: 715px){
             width: 90%;
+            line-height: 20px;
             text-align: center;
         }
     }
@@ -178,7 +188,7 @@
             border-radius: 5px;
             position: absolute;
             right: 2%;
-            top: 7%;
+            top: 6.7%;
             background-color: #fff;
 
             &::before,
@@ -206,7 +216,7 @@
         z-index: 2;
         position: absolute;
         right: 2%;
-        top: 5%;
+        top: 4.5%;
 
         &:checked ~ .menu__list{
             display: block;
@@ -253,11 +263,6 @@
     }
     
 }
-
-// .item:hover {
-//     cursor: pointer;
-// }
-
 
 a {
     position: relative;

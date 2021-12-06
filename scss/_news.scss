@@ -136,9 +136,9 @@
     border-radius: 50%;
     color: #fff;
     margin: 0 5px;
-        
-    @media screen and (min-width: 700px) {
-        margin: 0 52px;
+
+    @media screen and (max-width: 975px) {
+        display: none !important;
     }
 }
 
@@ -152,6 +152,10 @@
     border-right: 1px solid #fff;
     border-bottom: 1px solid #fff;
     transform: rotate(135deg);
+
+    @media screen and (max-width: 975px) {
+        display: none;
+    }
 }
 
 .my-next::after {
@@ -165,6 +169,10 @@
     border-right: 1px solid #fff;
     border-bottom: 1px solid #fff;
     transform: rotate(-48deg);
+
+    @media screen and (max-width: 975px) {
+        display: none;
+    }
 }
 
 .n-slider__item {

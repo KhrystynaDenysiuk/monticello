@@ -6,6 +6,7 @@
     left: 50%;
     transform: translate(-50%, -66%);
     height: 450px;
+    width: 800px;
     font-family: $gotham_book;
 
     &__container {
@@ -42,7 +43,8 @@
 
     &__block {
         @include FlexSpaceBetween();
-        margin: 0 65px;
+        width: 100%;
+        padding: 0 65px;
 
         @media screen and (max-width: 975px) {
             flex-direction: column;
@@ -55,12 +57,16 @@
     &__f-block {
         @include FlexCpaceAround();
         align-items: top;
-        width: auto;
+        width: 40%;
 
         .form, 
         .info {
             @include FlexColumn();
             flex-basis: 450px;
+        }
+
+        @media screen and (max-width: 975px) {
+            width: auto;
         }
     }
 
@@ -69,19 +75,24 @@
         left: 0;
         transform: translate(0, 0);
         height: 100%;
+        width: 100%;
     }
 }
 
 .form {
 
     &__input {
-        width: 310px;
+        width: auto;
         line-height: 30px;
         margin-bottom: 15px;
         border: none;
         border-bottom: 1px solid #ccc;
         color: #000; 
         opacity: 0.6;
+
+        @media screen and (max-width: 975px) {
+            width: 260px;
+        }
 
         @media screen and (max-width: 355px) {
             width: 200px;
@@ -105,7 +116,7 @@
     &__button {
         width: 140px;
         padding: 20px 0 10px 0;
-        transform: translateX(121%);
+        transform: translateX(82%);
         font-size: 13px;
         background-color: #fff;
         border: 1px solid #000;
@@ -131,6 +142,7 @@
 }
 
 .info {
+    width: 60%;
 
     &__title {
         display: inline-block;
@@ -138,6 +150,10 @@
         color: #4b5562;
         font-size: 16px;
         margin-left: 5px;
+
+        @media screen and (max-width: 400px) {
+            font-size: 12px;
+        }
     }
 
     &__text {
@@ -154,6 +170,7 @@
     }
 
     @media screen and (max-width: 975px) {
-        padding-bottom: 20px;
+        width: auto;
+        padding: 20px 0;
     }
 }
