@@ -14,15 +14,10 @@
     }
 
     &__content {
-        width: 770px;
+        width: 100%;
+        max-width: 770px;
         margin: 0 auto;
         padding-top: 100px;
-        
-        @media screen and (max-width: 800px) {
-            width: 100%;
-            padding: 60px 15px 0;
-            background: #fff;
-        }
     }
 
     &__title {
@@ -49,10 +44,11 @@
         @include FlexSpaceBetween();
         margin: 0 65px;
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 975px) {
             flex-direction: column;
             width: 100%;
             margin: 0;
+            align-items: center;
         }
     }
 
@@ -67,6 +63,13 @@
             flex-basis: 450px;
         }
     }
+
+    @media screen and (max-width: 975px) {
+        position: static;
+        left: 0;
+        transform: translate(0, 0);
+        height: 100%;
+    }
 }
 
 .form {
@@ -79,6 +82,10 @@
         border-bottom: 1px solid #ccc;
         color: #000; 
         opacity: 0.6;
+
+        @media screen and (max-width: 355px) {
+            width: 200px;
+        }
     }
     
     &__input::placeholder {
@@ -107,8 +114,12 @@
         font-family: $gotham_book;
         opacity: 0.3;
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 975px) {
             margin: 15px 0 25px;
+        }
+
+        @media screen and (max-width: 355px) {
+            transform: translateX(22%);
         }
     }
 
@@ -140,5 +151,9 @@
                 transform: rotate(85deg);
             }
         }
+    }
+
+    @media screen and (max-width: 975px) {
+        padding-bottom: 20px;
     }
 }

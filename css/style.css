@@ -1440,17 +1440,10 @@ li.slick-active button {
 }
 
 .contact__content {
-  width: 770px;
+  width: 100%;
+  max-width: 770px;
   margin: 0 auto;
   padding-top: 100px;
-}
-
-@media screen and (max-width: 800px) {
-  .contact__content {
-    width: 100%;
-    padding: 60px 15px 0;
-    background: #fff;
-  }
 }
 
 .contact__title {
@@ -1485,7 +1478,7 @@ li.slick-active button {
   margin: 0 65px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 975px) {
   .contact__block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1493,6 +1486,9 @@ li.slick-active button {
             flex-direction: column;
     width: 100%;
     margin: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1521,6 +1517,16 @@ li.slick-active button {
       flex-basis: 450px;
 }
 
+@media screen and (max-width: 975px) {
+  .contact {
+    position: static;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    height: 100%;
+  }
+}
+
 .form__input {
   width: 310px;
   line-height: 30px;
@@ -1529,6 +1535,12 @@ li.slick-active button {
   border-bottom: 1px solid #ccc;
   color: #000;
   opacity: 0.6;
+}
+
+@media screen and (max-width: 355px) {
+  .form__input {
+    width: 200px;
+  }
 }
 
 .form__input::-webkit-input-placeholder {
@@ -1574,9 +1586,16 @@ li.slick-active button {
   opacity: 0.3;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 975px) {
   .form__button {
     margin: 15px 0 25px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .form__button {
+    -webkit-transform: translateX(22%);
+            transform: translateX(22%);
   }
 }
 
@@ -1606,6 +1625,12 @@ li.slick-active button {
 .info__text .fa.fa-phone {
   -webkit-transform: rotate(85deg);
           transform: rotate(85deg);
+}
+
+@media screen and (max-width: 975px) {
+  .info {
+    padding-bottom: 20px;
+  }
 }
 
 .footer {
